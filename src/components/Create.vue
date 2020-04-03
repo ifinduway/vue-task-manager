@@ -69,9 +69,7 @@ export default {
         tags: this.tags,
         date: this.datePicker,
       };
-      if (!task.title || !task.descriptionTask || !task.date) {
-        console.log('хуета');
-      } else {
+      if (task.title && task.descriptionTask && task.date) {
         this.$store.dispatch('createTask', task);
         this.$router.push('/list');
       }
